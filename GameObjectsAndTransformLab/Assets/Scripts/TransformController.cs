@@ -14,10 +14,15 @@ public class TransformController : MonoBehaviour
         double circlePosY = Math.Sin(degrees) * radius;
         var p = new Vector3(Time.time*(float)circlePosX,Time.time*(float)circlePosY, 0);
         transform.Translate(p);
-        /*var x = Mathf.PingPong(Time.time,6);
+        
+        /*
+        
+        
+        var x = Mathf.PingPong(Time.time,6);
         var y = Mathf.PingPong(Time.time,1);
         var p = new Vector3(x,Math.Cos((float)y),0);
-        transform.position = p;*/
+        transform.position = p;
+        */
         
         // Rotate the target GameObject
         transform.Rotate(new Vector3(360,0,0)*Time.deltaTime);
