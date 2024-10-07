@@ -914,18 +914,18 @@ MonoBehaviour:
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
   m_XDamping: 0.3
-  m_YDamping: 1
+  m_YDamping: 6.4
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.45000017
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0
+  m_DeadZoneWidth: 0.18
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneHeight: 1.28
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -1332,7 +1332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a45a4c5599870d49a70ead325de0a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 12
+  jumpForce: 3
+  gravity: -75
 --- !u!1 &1844222625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,7 +1422,7 @@ Transform:
   m_GameObject: {fileID: 1844222625}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.019999996, y: 1.5600001, z: -9.932189}
+  m_LocalPosition: {x: -0.019999996, y: 1.1709998, z: -9.932189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1525,7 +1527,7 @@ Transform:
   m_GameObject: {fileID: 2020316401}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.019999996, y: 1.5600001, z: -9.932189}
+  m_LocalPosition: {x: -0.019999996, y: 1.1709998, z: -9.932189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

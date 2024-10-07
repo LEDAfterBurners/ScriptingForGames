@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterAnimationController : MonoBehaviour
 {
     private Animator animator;
+    private CharacterController controller;
     private void Start()
     {
         // Cache the Animator component attached to CharacterArt
