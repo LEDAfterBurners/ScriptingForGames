@@ -32,7 +32,7 @@ public class CharacterAnimationController : MonoBehaviour
         // Handle jumping
         if (Input.GetButtonDown("Jump"))
         {
-            animator.SetTrigger("DoubleJumpTrigger");
+            animator.SetTrigger("JumpTrigger");
         }
         
         // Handle wall jumping
