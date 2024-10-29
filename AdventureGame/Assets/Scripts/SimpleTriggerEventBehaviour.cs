@@ -11,6 +11,7 @@ public class SimpleTriggerEventBehaviour : MonoBehaviour
     {
         // Trigger the event and test with a debug message
         triggerEvent.Invoke();
+        HealthData.UpdateValue(-0.2f);
         Debug.Log("Player interacted with the object!");
     }
 }
