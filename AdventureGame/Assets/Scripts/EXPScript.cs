@@ -4,37 +4,41 @@ using UnityEngine;
 
 public class EXPScript : MonoBehaviour
 {
-    public float expData;
-    public int Level;
+    public SimpleFloatData expData;
+    public SimpleFloatData level;
+    private float expDataTemp;
+    private float levelTemp = 1.0f;
 
     public void ChangeEXP(float amount)
     {
-        if (expData < 1)
+        if (expDataTemp < 1.0f)
         {
-            expData += 1/Level;
+            expDataTemp += 1.0f/(levelTemp + 2);
         }
         else
         {
-            expData = 0;
-            Level += 1;
+            expDataTemp = 0.0f;
+            levelTemp += 1.0f;
         }
+        expData.SetValue(expDataTemp);
+        level.SetValue(levelTemp);
     }
     /**
     public SimpleFloatData expData;
     public SimpleIntData Level;
+    public float 
 
     public void ChangeEXP(float amount)
     {
-        if (expData < (float)1)
+        if (expData < One)
         {
-            expData.UpdateValue(1/Level);
+            expData.UpdateValue(One/Level);
         }
         else
         {
             expData.SetValue(0);
             Level.UpdateValue(1);
         }
-
     }
     **/
 }

@@ -155,14 +155,14 @@ RectTransform:
   m_GameObject: {fileID: 165287680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10.867499, y: 0.064821675, z: 1}
+  m_LocalScale: {x: 6.973457, y: 0.064821675, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 425852225}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -550, y: 250}
+  m_AnchoredPosition: {x: -355, y: 166}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165287682
@@ -439,37 +439,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 648821367355327080, guid: 79a11245ab26f4c4a911c5766000136c, type: 3}
   m_PrefabInstance: {fileID: 1092199607}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &621061173
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 621061174}
-  m_Layer: 0
-  m_Name: LevelContainer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &621061174
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621061173}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 624.9056, y: 226.5375, z: -3.6956003}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &654570078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 648821367355327080, guid: 79a11245ab26f4c4a911c5766000136c, type: 3}
@@ -504,8 +473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c231cdde96b203b4eb83c0f04e342e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expData: 0
-  Level: 1
+  expData: {fileID: 11400000, guid: 5ac426172720de4468aacb9e995d3a22, type: 2}
+  level: {fileID: 11400000, guid: 05d0373319c49f14fabe49c10d478f3d, type: 2}
 --- !u!4 &684938422
 Transform:
   m_ObjectHideFlags: 0
@@ -612,7 +581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -328, y: 305}
+  m_AnchoredPosition: {x: -243.8, y: 125}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755397569
@@ -2133,6 +2102,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6310784513432951837, guid: 222345347ed41574696bbf24ee671558, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310784513432951837, guid: 222345347ed41574696bbf24ee671558, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 684938421}
@@ -2208,5 +2181,4 @@ SceneRoots:
   - {fileID: 809153223}
   - {fileID: 1370457664}
   - {fileID: 684938422}
-  - {fileID: 621061174}
   - {fileID: 974112041}
