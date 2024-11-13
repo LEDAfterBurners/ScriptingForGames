@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleIntData : MonoBehaviour
+[CreateAssetMenu(menuName = "Single Variables/SimpleFloatData")]
+public class SimpleIntData : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public int value;
+    
+    public void UpdateValue(int amount)
     {
-        
+        value += amount;
     }
-
-    // Update is called once per frame
-    void Update()
+            
+    public void SetValue(int amount)
     {
-        
+        value = amount;
     }
 }
