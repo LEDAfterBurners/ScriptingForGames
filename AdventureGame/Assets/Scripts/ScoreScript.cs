@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class ScoreScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public SimpleIntData scoreData;
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeScore(int amount)
     {
-        
+        scoreData.UpdateValue(amount);
     }
 }

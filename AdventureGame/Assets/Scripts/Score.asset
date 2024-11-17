@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b65275de595b6241b272279f2a1b2d6, type: 3}
-  m_Name: HealthData
+  m_Script: {fileID: 11500000, guid: 988f0179a5f0ef941b64ba0c1a293c15, type: 3}
+  m_Name: Score
   m_EditorClassIdentifier: 
-  value: 0.39999992
+  value: 1
