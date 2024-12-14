@@ -7,6 +7,7 @@ public class SimpleCharacterController : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 8f;
     public float gravity = -9.81f;
+    [SerializeField] bool grounded;
     
     private CharacterController controller;
     private Transform thisTransform;
@@ -21,26 +22,30 @@ public class SimpleCharacterController : MonoBehaviour
 
     private void Update()
     {
-        MoveCharacter();
-        ApplyGravity();
         KeepCharacterOnXAxis();
+        ExtraGroundingCheck();
+        ApplyGravity();
+        MoveCharacter();
     }
-    
+
     private void MoveCharacter()
     {
         // Horizontal movement
         var moveInput = Input.GetAxis("Horizontal");
         var move = new Vector3(moveInput, 0f, 0f) * (moveSpeed * Time.deltaTime);
         controller.Move(move);
-        
+
         // Jumping
-        if (Input.GetButtonDown("Jump"))
-        {
+        if (Input.GetButtonDown("Jump") && grounded)
+        { 
+            Debug.Log("Jump");
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+            grounded = false;
+            Debug.Log("Ungrounded (jump)");
         }
     }
-
-    private void ApplyGravity()
+    
+    void ApplyGravity()
     {
         // Apply gravity when not grounded
         if (!controller.isGrounded)
@@ -49,11 +54,35 @@ public class SimpleCharacterController : MonoBehaviour
         }
         else
         {
-            velocity.y = 0f; // Reset velocity when grounded
+            // Keep pushing slightly to ensure grounding
+            velocity.y += (gravity / 100) * Time.deltaTime;
+            Debug.Log("I'm grounded!");
+            grounded = true;
+            // velocity.y = 0f;
         }
         
         // Apply the velocity to the controller
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void ExtraGroundingCheck()
+    {
+        if (!controller.isGrounded)
+        {
+            Debug.Log("Ungrounded (extra check)");
+            velocity.y += (gravity / 100) * Time.deltaTime;
+            if (controller.isGrounded)
+            {
+                grounded = true;
+                Debug.Log("Grounded (extra check)");
+            }
+        }
+        
+        if (controller.isGrounded && grounded == false)
+        {
+            grounded = true;
+            Debug.Log("Grounded (missed check)");
+        }
     }
     
     private void KeepCharacterOnXAxis()

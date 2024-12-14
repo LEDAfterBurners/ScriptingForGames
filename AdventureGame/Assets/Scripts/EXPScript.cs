@@ -9,6 +9,14 @@ public class EXPScript : MonoBehaviour
     private float expDataTemp;
     private float levelTemp = 1.0f;
 
+    public void Start()
+    {
+        expDataTemp = 0.0f;
+        levelTemp = 1.0f;
+        expData.SetValue(expDataTemp);
+        level.SetValue(levelTemp);
+    }
+    
     public void ChangeEXP(float amount)
     {
         if (expDataTemp < 1.0f)
